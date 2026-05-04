@@ -19,10 +19,10 @@ export default function Hero() {
   }, []);
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/shivam', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com/in/shivam-vishwakarma', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:shivam@example.com', label: 'Email' },
-    { icon: Phone, href: 'tel:+91XXXXXXXXXX', label: 'WhatsApp' },
+    { icon: Github, href: 'https://github.com/Shivamvrewa', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/shivavrewa/', label: 'LinkedIn' },
+    { icon: Mail, href: 'mailto:shivamvr1998@gmail.com', label: 'Email' },
+    { icon: Phone, href: 'tel:+918224839819', label: 'WhatsApp' },
   ];
 
   return (

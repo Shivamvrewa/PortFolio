@@ -12,29 +12,29 @@ export default function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'shivam@example.com',
-      href: 'mailto:shivam@example.com',
+      value: 'shivamvr1998@gmail.com',
+      href: 'mailto:shivamvr1998@gmail.com',
       color: 'neon-cyan',
     },
     {
       icon: Phone,
       label: 'Phone / WhatsApp',
-      value: '+91 XXXXXXXXXX',
-      href: 'tel:+91XXXXXXXXXX',
+      value: '+91 8224839819',
+      href: 'tel:+918224839819',
       color: 'neon-purple',
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      value: 'linkedin.com/in/shivam-vishwakarma',
-      href: 'https://linkedin.com/in/shivam-vishwakarma',
+      value: 'linkedin.com/in/shivavrewa/',
+      href: 'https://www.linkedin.com/in/shivavrewa/',
       color: 'neon-blue',
     },
     {
       icon: Github,
       label: 'GitHub',
       value: 'github.com/shivam',
-      href: 'https://github.com/shivam',
+      href: 'https://github.com/Shivamvrewa',
       color: 'neon-cyan',
     },
     {
@@ -103,22 +103,20 @@ export default function Contact() {
                   className="flex items-center gap-4 p-4 bg-glass-bg backdrop-blur-sm border border-glass-border rounded-xl hover:border-neon-cyan transition-all duration-300 hover:shadow-lg hover:shadow-neon-cyan/20 group"
                 >
                   <div
-                    className={`w-12 h-12 rounded-lg bg-gradient-to-br ${
-                      info.color === 'neon-cyan'
-                        ? 'from-neon-cyan/20 to-neon-cyan/5'
-                        : info.color === 'neon-purple'
+                    className={`w-12 h-12 rounded-lg bg-gradient-to-br ${info.color === 'neon-cyan'
+                      ? 'from-neon-cyan/20 to-neon-cyan/5'
+                      : info.color === 'neon-purple'
                         ? 'from-neon-purple/20 to-neon-purple/5'
                         : 'from-neon-blue/20 to-neon-blue/5'
-                    } flex items-center justify-center`}
+                      } flex items-center justify-center`}
                   >
                     <info.icon
-                      className={`w-6 h-6 ${
-                        info.color === 'neon-cyan'
-                          ? 'text-neon-cyan'
-                          : info.color === 'neon-purple'
+                      className={`w-6 h-6 ${info.color === 'neon-cyan'
+                        ? 'text-neon-cyan'
+                        : info.color === 'neon-purple'
                           ? 'text-neon-purple'
                           : 'text-neon-blue'
-                      }`}
+                        }`}
                     />
                   </div>
                   <div>
