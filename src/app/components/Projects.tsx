@@ -22,6 +22,7 @@ export default function Projects() {
       tech: ['Java', 'Spring Boot', 'WebSocket', 'React.js', 'Redis', 'MySQL', 'AWS EC2'],
       icon: TrendingUp,
       gradient: 'from-neon-cyan to-neon-blue',
+      liveLink: 'https://tradecopy.online/login',
     },
     {
       title: 'Hashboard',
@@ -54,6 +55,7 @@ export default function Projects() {
       tech: ['React.js', 'Redux', 'Spring Boot', 'REST API', 'PostgreSQL'],
       icon: Home,
       gradient: 'from-neon-blue to-neon-cyan',
+      liveLink: 'https://broan-nutone.com/en-us/overture',
     },
   ];
 
@@ -136,13 +138,15 @@ export default function Projects() {
                     </div>
 
                     <div className="flex gap-3">
-                      <button className="flex-1 px-4 py-2 bg-gradient-to-r from-neon-cyan to-neon-blue text-black font-semibold rounded-lg hover:shadow-lg hover:shadow-neon-cyan/50 transition-all duration-300 text-sm flex items-center justify-center gap-2">
+                      <a 
+                        href={project.liveLink || "#"} 
+                        target={project.liveLink ? "_blank" : undefined}
+                        rel={project.liveLink ? "noopener noreferrer" : undefined}
+                        className="flex-1 px-4 py-2 bg-gradient-to-r from-neon-cyan to-neon-blue text-black font-semibold rounded-lg hover:shadow-lg hover:shadow-neon-cyan/50 transition-all duration-300 text-sm flex items-center justify-center gap-2"
+                      >
                         <ExternalLink className="w-4 h-4" />
                         Live Demo
-                      </button>
-                      <button className="px-4 py-2 bg-glass-bg border border-glass-border text-white rounded-lg hover:border-neon-purple transition-all duration-300 flex items-center justify-center">
-                        <Github className="w-4 h-4" />
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>

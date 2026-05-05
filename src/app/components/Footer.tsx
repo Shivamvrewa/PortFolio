@@ -49,7 +49,8 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Download Resume</h4>
             <a
-              href="#"
+              href="/shivam_resume_05_MAY_2026.pdf"
+              download="shivam_resume_05_MAY_2026.pdf"
               className="inline-block px-6 py-3 bg-gradient-to-r from-neon-cyan to-neon-blue text-black font-semibold rounded-lg hover:shadow-lg hover:shadow-neon-cyan/50 transition-all duration-300 mb-4"
             >
               Download CV

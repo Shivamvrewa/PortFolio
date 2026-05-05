@@ -7,6 +7,8 @@ export default function Contact() {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   const contactInfo = [
     {
@@ -46,10 +48,41 @@ export default function Contact() {
     },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 3000);
+    setIsSubmitting(true);
+    setError('');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: 'bbc40834-59b3-4b43-aeee-17142a6ac0f4',
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        })
+      });
+      
+      const result = await response.json();
+      
+      if (result.success) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        setError(result.message || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      setError('Failed to send message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -243,11 +276,17 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full px-8 py-4 bg-gradient-to-r from-neon-cyan to-neon-blue text-black font-semibold rounded-lg hover:shadow-lg hover:shadow-neon-cyan/50 transition-all duration-300 flex items-center justify-center gap-2"
+                    disabled={isSubmitting}
+                    className="w-full px-8 py-4 bg-gradient-to-r from-neon-cyan to-neon-blue text-black font-semibold rounded-lg hover:shadow-lg hover:shadow-neon-cyan/50 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     <Send className="w-5 h-5" />
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </button>
+                  {error && (
+                    <p className="text-red-500 text-sm text-center mt-4">
+                      {error}
+                    </p>
+                  )}
                 </form>
               )}
             </div>

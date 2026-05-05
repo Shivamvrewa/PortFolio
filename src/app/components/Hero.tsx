@@ -118,7 +118,8 @@ export default function Hero() {
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
             </a>
             <a
-              href="#"
+              href="/shivam_resume_05_MAY_2026.pdf"
+              download="shivam_resume_05_MAY_2026.pdf"
               className="px-8 py-4 bg-glass-bg backdrop-blur-sm border border-glass-border text-white font-semibold rounded-lg hover:border-neon-purple hover:shadow-lg hover:shadow-neon-purple/30 transition-all duration-300 flex items-center gap-2"
             >
               <Download size={20} />
