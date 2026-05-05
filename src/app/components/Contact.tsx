@@ -64,7 +64,8 @@ export default function Contact() {
           access_key: 'bbc40834-59b3-4b43-aeee-17142a6ac0f4',
           name: formData.name,
           email: formData.email,
-          subject: formData.subject,
+          subject: formData.subject || 'New Contact from Portfolio',
+          'Inquiry Subject': formData.subject,
           message: formData.message,
         })
       });

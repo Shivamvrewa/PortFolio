@@ -9,6 +9,7 @@ export default function Experience() {
   const experiences = [
     {
       company: 'Garioxtech Private Limited',
+      url: 'https://www.garioxtech.com/',
       position: 'Full Stack Developer',
       location: 'India',
       period: 'Present',
@@ -29,6 +30,7 @@ export default function Experience() {
     },
     {
       company: 'Dream Filler Software Solution',
+      url: 'https://dream-filler.com/',
       position: 'Software Engineer Trainee',
       location: 'India',
       period: '2020 - 2021',
@@ -92,7 +94,11 @@ export default function Experience() {
                       </div>
                       <div className={index % 2 === 0 ? 'md:text-right' : ''}>
                         <h3 className="text-2xl font-bold text-white mb-1">{exp.position}</h3>
-                        <p className="text-neon-cyan text-lg font-semibold mb-2">{exp.company}</p>
+                        <p className="text-neon-cyan text-lg font-semibold mb-2">
+                          <a href={exp.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                            {exp.company}
+                          </a>
+                        </p>
                         <div className="flex flex-wrap gap-3 text-gray-400 text-sm md:justify-end">
                           <span className="flex items-center gap-1">
                             <Calendar className="w-4 h-4" />
