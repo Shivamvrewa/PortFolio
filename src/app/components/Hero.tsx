@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Github, Linkedin, Mail, Phone, Download, ArrowRight } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, Download, ArrowRight, Instagram } from 'lucide-react';
 
 export default function Hero() {
   const [currentRole, setCurrentRole] = useState(0);
@@ -21,6 +21,7 @@ export default function Hero() {
   const socialLinks = [
     { icon: Github, href: 'https://github.com/Shivamvrewa', label: 'GitHub' },
     { icon: Linkedin, href: 'https://www.linkedin.com/in/shivavrewa/', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://www.instagram.com/shivamv1601/', label: 'Instagram' },
     { icon: Mail, href: 'mailto:shivamvr1998@gmail.com', label: 'Email' },
     { icon: Phone, href: 'tel:+918224839819', label: 'WhatsApp' },
   ];
@@ -72,7 +73,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-2">
+            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-foreground mb-2">
               Shivam Vishwakarma
             </span>
           </motion.h1>
@@ -96,7 +97,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.p
-            className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mb-12"
+            className="text-muted-foreground text-lg md:text-xl max-w-3xl mx-auto mb-12"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
@@ -112,7 +113,7 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="group px-8 py-4 bg-gradient-to-r from-neon-cyan to-neon-blue text-black font-semibold rounded-lg hover:shadow-lg hover:shadow-neon-cyan/50 transition-all duration-300 flex items-center gap-2"
+              className="group px-8 py-4 bg-gradient-to-r from-neon-cyan to-neon-blue text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-neon-cyan/50 transition-all duration-300 flex items-center gap-2"
             >
               Hire Me
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
@@ -120,14 +121,14 @@ export default function Hero() {
             <a
               href="/shivam_resume_05_MAY_2026.pdf"
               download="shivam_resume_05_MAY_2026.pdf"
-              className="px-8 py-4 bg-glass-bg backdrop-blur-sm border border-glass-border text-white font-semibold rounded-lg hover:border-neon-purple hover:shadow-lg hover:shadow-neon-purple/30 transition-all duration-300 flex items-center gap-2"
+              className="px-8 py-4 bg-glass-bg backdrop-blur-sm border border-glass-border text-foreground font-semibold rounded-lg hover:border-neon-purple hover:shadow-lg hover:shadow-neon-purple/30 transition-all duration-300 flex items-center gap-2"
             >
               <Download size={20} />
               Download Resume
             </a>
             <a
               href="#projects"
-              className="px-8 py-4 bg-glass-bg backdrop-blur-sm border border-glass-border text-white font-semibold rounded-lg hover:border-neon-cyan hover:shadow-lg hover:shadow-neon-cyan/30 transition-all duration-300"
+              className="px-8 py-4 bg-glass-bg backdrop-blur-sm border border-glass-border text-foreground font-semibold rounded-lg hover:border-neon-cyan hover:shadow-lg hover:shadow-neon-cyan/30 transition-all duration-300"
             >
               View Projects
             </a>
@@ -145,7 +146,7 @@ export default function Hero() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-glass-bg backdrop-blur-sm border border-glass-border flex items-center justify-center text-gray-300 hover:text-neon-cyan hover:border-neon-cyan hover:shadow-lg hover:shadow-neon-cyan/30 transition-all duration-300"
+                className="w-12 h-12 rounded-full bg-glass-bg backdrop-blur-sm border border-glass-border flex items-center justify-center text-muted-foreground hover:text-neon-cyan hover:border-neon-cyan hover:shadow-lg hover:shadow-neon-cyan/30 transition-all duration-300"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, scale: 0 }}
@@ -159,19 +160,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <motion.div
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <div className="w-6 h-10 border-2 border-neon-cyan rounded-full flex justify-center">
-          <motion.div
-            className="w-1.5 h-3 bg-neon-cyan rounded-full mt-2"
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          />
-        </div>
-      </motion.div>
+
     </section>
   );
 }

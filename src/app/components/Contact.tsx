@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { motion, useInView } from 'motion/react';
-import { Mail, Phone, Linkedin, Github, MapPin, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, MapPin, Send, CheckCircle, Instagram } from 'lucide-react';
 
 export default function Contact() {
   const ref = useRef(null);
@@ -38,6 +38,13 @@ export default function Contact() {
       value: 'github.com/shivam',
       href: 'https://github.com/Shivamvrewa',
       color: 'neon-cyan',
+    },
+    {
+      icon: Instagram,
+      label: 'Instagram',
+      value: 'instagram.com/shivamv1601',
+      href: 'https://www.instagram.com/shivamv1601/',
+      color: 'neon-purple',
     },
     {
       icon: MapPin,
@@ -103,13 +110,13 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-white">Get In </span>
+            <span className="text-foreground">Get In </span>
             <span className="bg-gradient-to-r from-neon-cyan to-neon-purple bg-clip-text text-transparent">
               Touch
             </span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-neon-cyan to-neon-purple mx-auto rounded-full"></div>
-          <p className="text-gray-400 mt-4 text-lg">Let's Build Something Great Together</p>
+          <p className="text-muted-foreground mt-4 text-lg">Let's Build Something Great Together</p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -118,8 +125,8 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
-            <p className="text-gray-300 mb-8">
+            <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
+            <p className="text-muted-foreground mb-8">
               I'm available for full-time, remote, and contract opportunities. Whether you have a project
               in mind or just want to connect, feel free to reach out!
             </p>
@@ -154,8 +161,8 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">{info.label}</p>
-                    <p className="text-white font-medium group-hover:text-neon-cyan transition-colors">
+                    <p className="text-muted-foreground text-sm">{info.label}</p>
+                    <p className="text-foreground font-medium group-hover:text-neon-cyan transition-colors">
                       {info.value}
                     </p>
                   </div>
@@ -169,8 +176,8 @@ export default function Contact() {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="mt-8 p-6 bg-gradient-to-br from-neon-cyan/10 to-neon-purple/10 backdrop-blur-sm border border-glass-border rounded-xl"
             >
-              <h4 className="text-white font-semibold mb-2">Open to Opportunities</h4>
-              <ul className="space-y-2 text-gray-300 text-sm">
+              <h4 className="text-foreground font-semibold mb-2">Open to Opportunities</h4>
+              <ul className="space-y-2 text-muted-foreground text-sm">
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-neon-cyan rounded-full"></div>
                   Full-time positions
@@ -197,7 +204,7 @@ export default function Contact() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <div className="bg-glass-bg backdrop-blur-sm border border-glass-border rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Send a Message</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">Send a Message</h3>
 
               {isSubmitted ? (
                 <motion.div
@@ -206,13 +213,13 @@ export default function Contact() {
                   className="text-center py-12"
                 >
                   <CheckCircle className="w-16 h-16 text-neon-cyan mx-auto mb-4" />
-                  <h4 className="text-xl font-semibold text-white mb-2">Message Sent!</h4>
-                  <p className="text-gray-400">Thank you for reaching out. I'll get back to you soon.</p>
+                  <h4 className="text-xl font-semibold text-foreground mb-2">Message Sent!</h4>
+                  <p className="text-muted-foreground">Thank you for reaching out. I'll get back to you soon.</p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-white mb-2">
+                    <label htmlFor="name" className="block text-foreground mb-2">
                       Name
                     </label>
                     <input
@@ -222,13 +229,13 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-glass-bg border border-glass-border rounded-lg text-white focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all"
+                      className="w-full px-4 py-3 bg-glass-bg border border-glass-border rounded-lg text-foreground focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all"
                       placeholder="Your name"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-white mb-2">
+                    <label htmlFor="email" className="block text-foreground mb-2">
                       Email
                     </label>
                     <input
@@ -238,13 +245,13 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-glass-bg border border-glass-border rounded-lg text-white focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all"
+                      className="w-full px-4 py-3 bg-glass-bg border border-glass-border rounded-lg text-foreground focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all"
                       placeholder="your.email@example.com"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-white mb-2">
+                    <label htmlFor="subject" className="block text-foreground mb-2">
                       Subject
                     </label>
                     <input
@@ -254,13 +261,13 @@ export default function Contact() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 bg-glass-bg border border-glass-border rounded-lg text-white focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all"
+                      className="w-full px-4 py-3 bg-glass-bg border border-glass-border rounded-lg text-foreground focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all"
                       placeholder="Project inquiry / Job opportunity"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-white mb-2">
+                    <label htmlFor="message" className="block text-foreground mb-2">
                       Message
                     </label>
                     <textarea
@@ -270,7 +277,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-4 py-3 bg-glass-bg border border-glass-border rounded-lg text-white focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all resize-none"
+                      className="w-full px-4 py-3 bg-glass-bg border border-glass-border rounded-lg text-foreground focus:border-neon-cyan focus:outline-none focus:ring-2 focus:ring-neon-cyan/20 transition-all resize-none"
                       placeholder="Tell me about your project or opportunity..."
                     />
                   </div>

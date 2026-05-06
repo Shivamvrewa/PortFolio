@@ -88,7 +88,7 @@ export default function Skills() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-white">Technical </span>
+            <span className="text-foreground">Technical </span>
             <span className="bg-gradient-to-r from-neon-cyan to-neon-purple bg-clip-text text-transparent">
               Skills
             </span>
@@ -126,17 +126,17 @@ export default function Skills() {
                       }`}
                     />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{category.title}</h3>
+                  <h3 className="text-xl font-semibold text-foreground">{category.title}</h3>
                 </div>
 
                 <div className="space-y-4">
                   {category.skills.map((skill, skillIndex) => (
                     <div key={skill.name}>
                       <div className="flex justify-between items-center mb-2">
-                        <span className="text-gray-300 text-sm">{skill.name}</span>
+                        <span className="text-muted-foreground text-sm">{skill.name}</span>
                         <span className="text-neon-cyan text-sm font-semibold">{skill.level}%</span>
                       </div>
-                      <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+                      <div className="h-2 bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={isInView ? { width: `${skill.level}%` } : {}}

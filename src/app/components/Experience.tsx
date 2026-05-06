@@ -64,7 +64,7 @@ export default function Experience() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-white">Work </span>
+            <span className="text-foreground">Work </span>
             <span className="bg-gradient-to-r from-neon-cyan to-neon-purple bg-clip-text text-transparent">
               Experience
             </span>
@@ -93,13 +93,13 @@ export default function Experience() {
                         <Briefcase className="w-7 h-7 text-neon-cyan" />
                       </div>
                       <div className={index % 2 === 0 ? 'md:text-right' : ''}>
-                        <h3 className="text-2xl font-bold text-white mb-1">{exp.position}</h3>
+                        <h3 className="text-2xl font-bold text-foreground mb-1">{exp.position}</h3>
                         <p className="text-neon-cyan text-lg font-semibold mb-2">
                           <a href={exp.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
                             {exp.company}
                           </a>
                         </p>
-                        <div className="flex flex-wrap gap-3 text-gray-400 text-sm md:justify-end">
+                        <div className="flex flex-wrap gap-3 text-muted-foreground text-sm md:justify-end">
                           <span className="flex items-center gap-1">
                             <Calendar className="w-4 h-4" />
                             {exp.period}
@@ -117,14 +117,14 @@ export default function Experience() {
 
                     <div className="space-y-6">
                       <div>
-                        <h4 className="text-white font-semibold mb-3 flex items-center gap-2 md:justify-end">
+                        <h4 className="text-foreground font-semibold mb-3 flex items-center gap-2 md:justify-end">
                           <span>Key Responsibilities</span>
                         </h4>
                         <ul className="space-y-2">
                           {exp.responsibilities.map((resp, idx) => (
                             <li
                               key={idx}
-                              className="text-gray-300 text-sm flex items-start gap-2 md:flex-row-reverse md:text-right"
+                              className="text-muted-foreground text-sm flex items-start gap-2 md:flex-row-reverse md:text-right"
                             >
                               <ChevronRight className="w-4 h-4 text-neon-cyan flex-shrink-0 mt-0.5" />
                               <span>{resp}</span>
@@ -134,12 +134,12 @@ export default function Experience() {
                       </div>
 
                       <div>
-                        <h4 className="text-white font-semibold mb-3 md:text-right">Achievements</h4>
+                        <h4 className="text-foreground font-semibold mb-3 md:text-right">Achievements</h4>
                         <ul className="space-y-2">
                           {exp.achievements.map((achievement, idx) => (
                             <li
                               key={idx}
-                              className="text-gray-300 text-sm flex items-start gap-2 md:flex-row-reverse md:text-right"
+                              className="text-muted-foreground text-sm flex items-start gap-2 md:flex-row-reverse md:text-right"
                             >
                               <div className="w-2 h-2 bg-neon-purple rounded-full flex-shrink-0 mt-1.5"></div>
                               <span>{achievement}</span>

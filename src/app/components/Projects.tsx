@@ -72,7 +72,7 @@ export default function Projects() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-white">Featured </span>
+            <span className="text-foreground">Featured </span>
             <span className="bg-gradient-to-r from-neon-cyan to-neon-purple bg-clip-text text-transparent">
               Projects
             </span>
@@ -99,25 +99,25 @@ export default function Projects() {
                 </div>
 
                 <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">{project.description}</p>
+                  <h3 className="text-2xl font-bold text-foreground mb-3">{project.title}</h3>
+                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{project.description}</p>
 
                   <div className="space-y-4 mb-6">
                     <div>
                       <h4 className="text-neon-cyan text-sm font-semibold mb-2">Problem</h4>
-                      <p className="text-gray-400 text-xs">{project.problem}</p>
+                      <p className="text-muted-foreground text-xs">{project.problem}</p>
                     </div>
                     <div>
                       <h4 className="text-neon-purple text-sm font-semibold mb-2">Solution</h4>
-                      <p className="text-gray-400 text-xs">{project.solution}</p>
+                      <p className="text-muted-foreground text-xs">{project.solution}</p>
                     </div>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-white text-sm font-semibold mb-3">Impact & Achievements</h4>
+                    <h4 className="text-foreground text-sm font-semibold mb-3">Impact & Achievements</h4>
                     <ul className="space-y-2">
                       {project.impact.map((item, idx) => (
-                        <li key={idx} className="text-gray-300 text-xs flex items-start gap-2">
+                        <li key={idx} className="text-muted-foreground text-xs flex items-start gap-2">
                           <Zap className="w-3 h-3 text-neon-cyan flex-shrink-0 mt-0.5" />
                           <span>{item}</span>
                         </li>
@@ -142,7 +142,7 @@ export default function Projects() {
                         href={project.liveLink || "#"} 
                         target={project.liveLink ? "_blank" : undefined}
                         rel={project.liveLink ? "noopener noreferrer" : undefined}
-                        className="flex-1 px-4 py-2 bg-gradient-to-r from-neon-cyan to-neon-blue text-black font-semibold rounded-lg hover:shadow-lg hover:shadow-neon-cyan/50 transition-all duration-300 text-sm flex items-center justify-center gap-2"
+                        className="flex-1 px-4 py-2 bg-gradient-to-r from-neon-cyan to-neon-blue text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-neon-cyan/50 transition-all duration-300 text-sm flex items-center justify-center gap-2"
                       >
                         <ExternalLink className="w-4 h-4" />
                         Live Demo

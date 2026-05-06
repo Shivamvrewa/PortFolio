@@ -26,7 +26,7 @@ export default function About() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-white">About </span>
+            <span className="text-foreground">About </span>
             <span className="bg-gradient-to-r from-neon-cyan to-neon-purple bg-clip-text text-transparent">
               Me
             </span>
@@ -44,7 +44,7 @@ export default function About() {
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-neon-cyan/20 to-neon-purple/20 backdrop-blur-sm border border-glass-border p-8 flex items-center justify-center">
               <div className="text-center">
                 <Code2 className="w-32 h-32 mx-auto mb-4 text-neon-cyan" strokeWidth={1.5} />
-                <p className="text-gray-300 text-lg">Full Stack Java Developer</p>
+                <p className="text-muted-foreground text-lg">Full Stack Java Developer</p>
                 <p className="text-neon-cyan text-2xl font-bold mt-2">4+ Years</p>
               </div>
             </div>
@@ -58,18 +58,18 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="space-y-6"
           >
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <p className="text-muted-foreground text-lg leading-relaxed">
               I'm a <span className="text-neon-cyan font-semibold">Full Stack Java Developer</span> with{' '}
               <span className="text-neon-purple font-semibold">4+ years of experience</span> specializing in
               building scalable, high-performance enterprise applications.
             </p>
-            <p className="text-gray-300 text-lg leading-relaxed">
+            <p className="text-muted-foreground text-lg leading-relaxed">
               My expertise spans across <span className="text-neon-cyan font-semibold">Java, Spring Boot,
               Microservices, React.js, WebSocket systems, and AWS</span>. I've successfully architected and
               delivered complex fintech platforms, real-time trading systems, and customer experience solutions.
             </p>
             <div className="space-y-3">
-              <h3 className="text-xl font-semibold text-white mb-4">Key Strengths:</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-4">Key Strengths:</h3>
               <div className="grid grid-cols-2 gap-4">
                 {[
                   'Scalable APIs',
@@ -84,7 +84,7 @@ export default function About() {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
-                    className="flex items-center gap-2 text-gray-300"
+                    className="flex items-center gap-2 text-muted-foreground"
                   >
                     <div className="w-2 h-2 bg-neon-cyan rounded-full"></div>
                     <span>{strength}</span>
@@ -150,7 +150,7 @@ function StatCard({
           {count.toLocaleString()}
           {stat.suffix}
         </div>
-        <p className="text-gray-400 text-sm">{stat.label}</p>
+        <p className="text-muted-foreground text-sm">{stat.label}</p>
       </div>
       <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/0 to-neon-purple/0 group-hover:from-neon-cyan/5 group-hover:to-neon-purple/5 rounded-xl transition-all duration-300 -z-10"></div>
     </motion.div>
